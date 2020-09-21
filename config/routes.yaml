@@ -1,3 +1,11 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+app_lucky_number:
+    path: /lucky/number/{maxNumber<\d+>?100}
+    controller: App\Controller\LuckyController::number
+
+api_lucky_number:
+    path: /api/lucky/number/{maxNumber<\d+>?100}
+    controller: App\Controller\LuckyController::numberApi
